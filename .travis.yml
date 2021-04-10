@@ -14,7 +14,7 @@ script:
     - export CXX=g++-7
     - cmake --version
     - cmake CMakeLists.txt
-    - cmake  --build . --target neat
+    - cmake --build . --target package
 deploy:
   provider: script
   skip_cleanup: true

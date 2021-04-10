@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-set(THIS MorpheusMatrix)
+set (THIS MorpheusMatrix)
 if (DEFINED ENV{TRAVIS_BUILD_NUMBER})
     project(${THIS} VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 else()
@@ -13,7 +13,7 @@ include_directories(lib)
 include_directories(src)
 
 add_executable (Morpheus_Matrix src/main.cpp lib/matrix.h)
-set_target_properties(Morpheus_Matrix PROPERTIES CXX_STANDARD_REQUIRED ON)
+set_target_properties(Morpheus_Matrix PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 target_include_directories(Morpheus_Matrix PRIVATE "${CMAKE_BINARY_DIR}")
 
 
