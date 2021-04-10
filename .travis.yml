@@ -1,11 +1,14 @@
 language: cpp
 compiler: gcc
 
-before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  - sudo apt-get update -qq
-install:
-  - sudo apt-get install g++
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+
 script:
     - export CC=gcc-7
     - export CXX=g++-7
