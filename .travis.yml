@@ -14,4 +14,4 @@ deploy:
   script:
     - curl -T MorpheusMatrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ukodo-kakaku:$BINTRAY_API_KEY  "https://api.bintray.com/content/prinus/Morfeus/$TRAVIS_BUILD_NUMBER/MorpheusMatrix-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
   on:
-    all_branches: true
+    all_branches: true 
