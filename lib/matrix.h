@@ -160,9 +160,9 @@ namespace mtx
         ContanerType cells;
     };
 
-    template<typename T, int DefVal, int Dim>
-    Matrix<T, DefVal, Dim>::Matrix() {}
+    template<typename T, int DEFAULT_VALUE, int DIM>
+    Matrix<T, DEFAULT_VALUE, DIM>::Matrix() {}
 
-    template<typename T, int DefVal, int Dim>
-    Matrix<T, DefVal, Dim>::~Matrix() {}
+    template<typename T, int DEFAULT_VALUE, int DIM>
+    Matrix<T, DEFAULT_VALUE, DIM>::~Matrix() {}
 }
