@@ -9,20 +9,20 @@ else()
 endif()
 
 set(CMAKE_CXX_STANDARD 17)
-add_executable(MorpheusMatrix src/main.cpp lib/matrix.h)
+add_executable(MorpheusMatrix_main src/main.cpp lib/matrix.h)
 
 if (MSVC)
-    target_compile_options(MorpheusMatrix PRIVATE
+    target_compile_options(MorpheusMatrix_main PRIVATE
             /W4
             )
 else ()
-    target_compile_options(MorpheusMatrix PRIVATE
+    target_compile_options(MorpheusMatrix_main PRIVATE
             -Wall -Wextra -pedantic -Werror
             )
 endif()
 
 
-install(TARGETS MorpheusMatrix RUNTIME DESTINATION bin)
+install(TARGETS MorpheusMatrix_main RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
