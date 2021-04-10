@@ -6,12 +6,8 @@ install:
   - sudo apt-get install g++-7 cmake
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
 script:
-  - gcc --version
-  - g++ --version
-  - cmake --version
   - cmake .
   - cmake --build .
-  - cmake --build . --target test
   - cmake --build . --target package
 deploy:
   provider: script
