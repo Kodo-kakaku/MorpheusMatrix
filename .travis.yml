@@ -1,13 +1,17 @@
 language: cpp
+compiler: gcc
+
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
 install:
   - sudo apt-get install g++
 script:
-  - cmake .
-  - cmake --build .
-  - cmake --build . --target package
+    - export CC=gcc-7
+    - export CXX=g++-7
+    - cmake --version
+    - cmake CMakeLists.txt
+    - cmake  --build . --target neat
 deploy:
   provider: script
   skip_cleanup: true
