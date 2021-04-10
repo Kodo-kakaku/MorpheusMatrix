@@ -8,9 +8,9 @@ install:
 script:
   - gcc --version
   - g++ --version
-  - cmake --version
   - cmake .
   - cmake --build .
+  - cmake --build . --target package
 deploy:
   provider: script
   skip_cleanup: true
